@@ -36,9 +36,9 @@ app.get('/estimate-delivery', (req, res) => {
   let shippingMethod = req.query.shippingMethod;
   let distance = parseFloat(req.query.distance);
   let result;
-  if (shippingMethod === 'Standard') {
+  if (shippingMethod === 'standard') {
     result = distance / 50;
-  } else if (shippingMethod === 'Express') {
+  } else if (shippingMethod === 'express') {
     result = distance / 100;
   }
   res.send(result.toString());
